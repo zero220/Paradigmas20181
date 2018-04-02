@@ -12,7 +12,7 @@ auxBin2Dec [0] expn= 0
 auxBin2Dec [1] expn= 1
 auxBin2Dec (bits) expn
     |head bits==1 || head bits==0        =(2*head bits)^expn + (auxBin2Dec(tail bits) (expn) )
-    |otherwise           =1
+    |otherwise           =undefined
 
 bin2dec :: [Int] -> Int
 bin2dec [] = undefined
