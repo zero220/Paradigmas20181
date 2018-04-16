@@ -63,3 +63,9 @@ positivos(L1,L2) :-
  positivo1(H, N),
  LC = [N|LB],
  delete(LC, -1, L2).
+
+mesmaPosicao(_,[],[]).
+mesmaPosicao(A,L1,L2) :-
+ nth0(N1,L1,A),
+ nth0(N2,L2,A),
+ N1 =:= N2.

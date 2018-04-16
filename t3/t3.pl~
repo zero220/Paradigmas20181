@@ -66,6 +66,9 @@ positivos(L1,L2) :-
 
 mesmaPosicao(_,[],[]).
 mesmaPosicao(A,L1,L2) :-
- nth0(A,L1,N1),
- nth0(A,L2,N2),
+ nth0(N1,L1,A),
+ nth0(N2,L2,A),
  N1 =:= N2.
+
+%comissao(NP,LP,C) :-
+
