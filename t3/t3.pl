@@ -49,4 +49,17 @@ potencias(N , L) :-
      inverte(L1, L).
 
 
+positivo1(N1,N2) :-
+ N1<1,
+ N2 is -1.
+positivo1(N1,N2) :-
+ N1>0,
+ N2 is N1.
 
+positivos([], []).
+positivos(L1,L2) :-
+ L1 = [H|T],
+ positivos(T, LB),
+ positivo1(H, N),
+ LC = [N|LB],
+ delete(LC, -1, L2).
