@@ -34,3 +34,19 @@ zipmult(L1, L2, L3) :-
  L2 = [H2|_],
  L3 is H1*H2.
 
+%regra criada para inversão de listas
+inverte([], []).
+inverte([H|T], L) :-
+ inverte(T, X),
+ append(X, [H], L).
+
+
+potencias(1 , [1]).
+potencias(N , L) :-
+     N>0,
+     N1 is N - 1,
+     potN0(N1, L1),
+     inverte(L1, L).
+
+
+
